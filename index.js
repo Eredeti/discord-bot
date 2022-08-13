@@ -20,7 +20,7 @@ client.on("messageCreate", message => {
     if(message.content === "ping"){ // si le message est ping
         message.reply("pong"); // répond au message AVEC ping
         message.channel.send("pong"); // répond au message SANS ping
-        message.author.send("pong");
+        message.author.send("pong"); // envoie un message mp
     }
     else if(message.content === "help"){
         message.reply("les commandes du bot sont : \n test 1 \n test 2") // \n permet d'aller à la ligne
@@ -30,4 +30,4 @@ client.on("messageCreate", message => {
     }
 });
 
-client.login("MTAwODEyOTIxMTIyMDkwNjA1NA.GmJgx9.epQaIfCREZyl-5tSliOd0eUvtj4EiFWRyUwXpU"); //la token du bot
+client.login(process.env.TOKEN); //la token du bot
