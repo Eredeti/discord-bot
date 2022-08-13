@@ -1,4 +1,5 @@
 const { Client, GatewayIntentBits } = require("discord.js");
+const { write } = require("fs");
 
 const client = new Client({
     intents: [
